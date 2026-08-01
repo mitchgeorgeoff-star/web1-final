@@ -322,8 +322,9 @@ textarea {
   }
 
   .service-card img {
-    height: 190px;
+    height: 180px;
     object-fit: cover;
+    object-position: center;
   }
 
   .team-member {
