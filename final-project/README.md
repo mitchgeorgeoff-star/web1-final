@@ -13,6 +13,10 @@ This folder contains the HTML, CSS, and image assets for the final project submi
 
 - Images are stored in `final-project/images/` so GitHub Pages can serve them correctly.
 - The HTML includes comments describing the structure and how CSS will be used.
+- The page uses a mobile-first approach with tablet and desktop breakpoints:
+  - mobile: default layout
+  - tablet: `min-width: 760px`
+  - desktop: `min-width: 1024px`
 - No JavaScript is required for this assignment; the page is built using static HTML and CSS only.
 
 ## GitHub Pages
