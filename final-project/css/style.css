@@ -1,0 +1,42 @@
+/* Main stylesheet for final-project
+   Note: background images are referenced from the final-project/images folder
+   relative to this file: ../images/<file> */
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #fff;
+}
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+.site-header { background-color: #222; color: #fff; padding: 15px 0; }
+.header-inner { display: flex; flex-direction: column; gap: 15px; align-items: stretch; }
+.logo img { width: 70px; height: auto; }
+
+.hero { background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("../images/main-banner.jpg") center/cover no-repeat; color: #fff; padding: 70px 0; }
+.hero-content { background-color: rgba(34,34,34,0.75); padding: 25px 20px; max-width: 700px; }
+
+.about { background-color: #ffe6ac; }
+.about-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+.services-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+.service-card img { width: 100%; height: auto; }
+
+.vision { background: linear-gradient(rgba(34,34,34,0.55), rgba(34,34,34,0.55)), url("../images/vision.jpg") center/cover no-repeat; color: #fff; }
+
+.team-member { display: grid; grid-template-columns: 1fr; background-color: #ffe6ac; margin-bottom: 20px; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+.site-footer { background-color: #222; color: #fff; padding: 20px 0; }
+
+/* Responsive changes at 760px */
+@media screen and (min-width: 760px) {
+  .header-inner { flex-direction: row; align-items: center; flex-wrap: wrap; }
+  .site-nav ul { display: flex; gap: 10px; }
+  .about-grid { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-member { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+}

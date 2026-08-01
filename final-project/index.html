@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+  Final project HTML for Three Star Media mockup.
+  Comments explain structure and how CSS will be applied for layout and responsiveness.
+  Images are stored inside the `final-project/images/` folder so GitHub Pages can serve them.
+  No JavaScript is required for this assignment; any future behavior will be added later.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Three Star Media — Final Project</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header: contains logo, nav and search. Use flex layout in CSS to align items horizontally on desktop.
+       The class name `team-member-reverse` is intentionally used to let CSS swap the content order
+       on wider screens while keeping the HTML semantic. -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">
+        <img src="images/logo.png" alt="Three Star Media logo">
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <form class="search-form" action="#" method="get">
+        <label for="search" class="sr-only">Search</label>
+        <input type="search" id="search" name="search" placeholder="Search">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero: background image will be applied in CSS for easy overlay handling -->
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <h1>Welcome to Three Star Media</h1>
+        <p>We are a creative digital agency focused on helping businesses grow through strategy, design, and technology.</p>
+        <a class="button button-primary" href="#contact">Connect with us</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <img src="images/about-us.jpg" alt="Modern office space with a table tennis table">
+        <div class="about-content">
+          <h2>About Us</h2>
+          <p>Short descriptive text goes here. In CSS this area will sit beside the image on wider screens and stack on smaller screens.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="images/digital.jpg" alt="Digital Transformation">
+            <div class="service-card-content">
+              <h3>Digital Transformation</h3>
+              <p>Short blurb describing the service.</p>
+              <a class="button button-secondary" href="#">Digital Plans</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="images/marketing.jpg" alt="Marketing">
+            <div class="service-card-content">
+              <h3>Marketing</h3>
+              <p>Short blurb describing the service.</p>
+              <a class="button button-secondary" href="#">Marketing Plans</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="images/web.jpg" alt="Web Development">
+            <div class="service-card-content">
+              <h3>Web Development</h3>
+              <p>Short blurb describing the service.</p>
+              <a class="button button-secondary" href="#">Web Plans</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="images/print.jpg" alt="Print">
+            <div class="service-card-content">
+              <h3>Print</h3>
+              <p>Short blurb describing the service.</p>
+              <a class="button button-secondary" href="#">Print Plans</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="vision">
+      <div class="container vision-content">
+        <h2>Our Vision</h2>
+        <p>Short vision statement here.</p>
+        <a class="button button-secondary" href="#">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="team">
+      <div class="container">
+        <h2>Our Team</h2>
+        <article class="team-member">
+          <img src="images/john.jpg" alt="John Doe">
+          <div class="team-member-content">
+            <h3>John Doe</h3>
+            <h4>CEO &amp; Founder</h4>
+            <p>Short bio goes here.</p>
+          </div>
+        </article>
+
+        <article class="team-member team-member-reverse">
+          <img src="images/bob.jpg" alt="Bob Rite">
+          <div class="team-member-content">
+            <h3>Bob Rite</h3>
+            <h4>Creative Director</h4>
+            <p>Short bio goes here.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+          <form class="contact-form" action="#" method="post">
+            <h3>Send us a message</h3>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6"></textarea>
+            <button type="submit" class="button button-primary">Send</button>
+          </form>
+
+          <div class="location">
+            <h3>Location</h3>
+            <iframe title="Three Star Media location map" src="https://www.google.com/maps?q=Ottawa&output=embed" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          </div>
+
+          <div class="hours">
+            <h3>Hours of operation</h3>
+            <table>
+              <thead>
+                <tr><th>Day</th><th>Hours</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Monday - Friday</td><td>9 AM - 6 PM</td></tr>
+                <tr><td>Saturday</td><td>10 AM - 4 PM</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Three Star Media. All Rights Reserved.</p>
+      <p>Images provided for class assignment.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
